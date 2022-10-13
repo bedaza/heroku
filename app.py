@@ -2,10 +2,10 @@ import os
 import functools
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import Flask, render_template, flash, request, redirect, url_for, jsonify,session,make_response,send_file,g
-import esqueleto_14.utils as utils
-from esqueleto_14.db import close_db, get_db
-from esqueleto_14.formulario import Contactenos,Enviar
-from esqueleto_14.message import mensajes
+import utils as utils
+from db import close_db, get_db
+from formulario import Contactenos,Enviar
+from message import mensajes
 
 app = Flask( __name__ )
 app.secret_key = os.urandom( 24 )
